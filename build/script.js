@@ -1,1 +1,1 @@
-const swiper=new Swiper(".swiper",{loop:!0,navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},pagination:{el:".swiper-pagination"}});
+const Swal=require("sweetalert2")["default"],swiper=(document.getElementById("follow").addEventListener("click",function(){Swal.fire("Any fool can use a computer")}),new Swiper(".swiper",{loop:!0,navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},pagination:{el:".swiper-pagination"}}));
