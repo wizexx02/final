@@ -409,6 +409,9 @@ body {
   align-items: center;
 }
 
+.swiper {
+  width: 80%;
+}
 @media (max-width: 896px) {
   .swiper {
     display: none;

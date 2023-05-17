@@ -1,25 +1,28 @@
-  // const { default: Swal } = require("sweetalert2");
+document.querySelector('.header__button').addEventListener('click', function(){
+  (async () => {
 
-  // document.getElementById('follow').addEventListener('click', function(){
-  //   Swal.fire('Any fool can use a computer')
-  // })
-  const { value: url } = await Swal.fire({
-    input: 'url',
-    inputLabel: 'URL address',
-    inputPlaceholder: 'Enter the URL'
-  })
-  
-  if (url) {
-    Swal.fire(`Entered URL: ${url}`)
-  }
-  const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    loop: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-      el: '.swiper-pagination',
+    const { value: email } = await Swal.fire({
+      title: 'Fill in your email address',
+      input: 'email',
+      inputLabel: 'We will send you information about payment and shipping',
+      inputPlaceholder: 'Enter your email address'
+    })
+    
+    if (email) {
+      Swal.fire(`Check ur mailbox, we send information for you`)
     }
-  });
+    
+    })()
+})
+
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  loop: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+  }
+});
